@@ -1,0 +1,164 @@
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --color-surface: #fcfcfb;
+  --color-page: #f9f9f7;
+  --color-surface-raised: #ffffff;
+
+  /* Ink */
+  --color-text-primary: #0b0b0b;
+  --color-text-secondary: #52514e;
+  --color-text-muted: #898781;
+  --color-border: rgba(11, 11, 11, 0.1);
+  --color-gridline: #e1e0d9;
+
+  /* Brand */
+  --color-brand: #2a78d6;
+  --color-brand-strong: #184f95;
+  --color-brand-tint: #e8f0fb;
+
+  /* Status (fixed, never themed) */
+  --color-good: #0ca30c;
+  --color-good-tint: #e4f5e4;
+  --color-warning: #b9790f;
+  --color-warning-tint: #fff3d9;
+  --color-serious: #b8532f;
+  --color-serious-tint: #fbe7de;
+  --color-critical: #d03b3b;
+  --color-critical-tint: #fbe2e2;
+  --color-muted-tint: #eeede9;
+
+  /* Business-chance badges (hot / warm / cold) — distinct hues from status
+     so a chance chip never gets mistaken for a status chip in the same row */
+  --color-chance-hot: #d03b3b;
+  --color-chance-hot-tint: #fbe2e2;
+  --color-chance-warm: #c15a1f;
+  --color-chance-warm-tint: #fbe9db;
+  --color-chance-cold: #4a3aa7;
+  --color-chance-cold-tint: #e9e6f7;
+
+  /* Chart series */
+  --chart-series-1: #2a78d6;
+  --chart-series-2: #0ca30c;
+  --chart-axis: #c3c2b7;
+  --chart-grid: #e1e0d9;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(11, 11, 11, 0.06);
+  --shadow-md: 0 4px 12px rgba(11, 11, 11, 0.1);
+  --shadow-lg: 0 12px 32px rgba(11, 11, 11, 0.14);
+
+  /* Font sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.375rem;
+  --font-size-2xl: 1.75rem;
+
+  --font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Layout */
+  --header-height: 56px;
+  --sidebar-width: 240px;
+  --bottom-nav-height: 60px;
+  --max-content-width: 1280px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+
+    --color-surface: #1a1a19;
+    --color-page: #0d0d0d;
+    --color-surface-raised: #232322;
+
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #c3c2b7;
+    --color-text-muted: #898781;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-gridline: #2c2c2a;
+
+    --color-brand: #3987e5;
+    --color-brand-strong: #86b6ef;
+    --color-brand-tint: #16273b;
+
+    --color-good: #0ca30c;
+    --color-good-tint: #123312;
+    --color-warning: #d99a2b;
+    --color-warning-tint: #3a2c0f;
+    --color-serious: #d3714a;
+    --color-serious-tint: #3a2418;
+    --color-critical: #e66767;
+    --color-critical-tint: #3a1a1a;
+    --color-muted-tint: #232322;
+
+    --color-chance-hot: #e66767;
+    --color-chance-hot-tint: #3a1a1a;
+    --color-chance-warm: #d97b3f;
+    --color-chance-warm-tint: #3a260f;
+    --color-chance-cold: #9085e9;
+    --color-chance-cold-tint: #23204a;
+
+    --chart-series-1: #3987e5;
+    --chart-series-2: #0ca30c;
+    --chart-axis: #383835;
+    --chart-grid: #2c2c2a;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-surface: #1a1a19;
+  --color-page: #0d0d0d;
+  --color-surface-raised: #232322;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #c3c2b7;
+  --color-text-muted: #898781;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-gridline: #2c2c2a;
+
+  --color-brand: #3987e5;
+  --color-brand-strong: #86b6ef;
+  --color-brand-tint: #16273b;
+
+  --color-good: #0ca30c;
+  --color-good-tint: #123312;
+  --color-warning: #d99a2b;
+  --color-warning-tint: #3a2c0f;
+  --color-serious: #d3714a;
+  --color-serious-tint: #3a2418;
+  --color-critical: #e66767;
+  --color-critical-tint: #3a1a1a;
+  --color-muted-tint: #232322;
+
+  --color-chance-hot: #e66767;
+  --color-chance-hot-tint: #3a1a1a;
+  --color-chance-warm: #d97b3f;
+  --color-chance-warm-tint: #3a260f;
+  --color-chance-cold: #9085e9;
+  --color-chance-cold-tint: #23204a;
+
+  --chart-series-1: #3987e5;
+  --chart-series-2: #0ca30c;
+  --chart-axis: #383835;
+  --chart-grid: #2c2c2a;
+}
