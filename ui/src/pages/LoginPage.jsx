@@ -4,6 +4,7 @@ import { useAuth } from "../hooks/useAuth";
 import { getErrorMessage } from "../utils/getErrorMessage";
 import Input from "../components/common/Input";
 import Button from "../components/common/Button";
+import Logo from "../components/common/Logo";
 
 const LoginPage = () => {
   const { user, login } = useAuth();
@@ -36,7 +37,9 @@ const LoginPage = () => {
   return (
     <div className="auth-screen">
       <form className="auth-card" onSubmit={handleSubmit}>
-        <div className="auth-card__brand">Field Lead Tracker</div>
+        <div className="auth-card__logo">
+          <Logo size={56} />
+        </div>
         <p className="auth-card__subtitle">Sign in to log and track your leads.</p>
         <Input
           name="email"

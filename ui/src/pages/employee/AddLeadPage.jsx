@@ -23,8 +23,10 @@ const AddLeadPage = () => {
       .getAreas()
       .then(({ data }) => {
         setAreas(data.areas);
+        // Area starts blank on a fresh form — only an unsaved draft from this
+        // same browser (a genuinely interrupted save) restores prior text.
         const draft = localStorage.getItem(DRAFT_KEY);
-        setInitialValues(draft ? JSON.parse(draft) : { area: data.lastArea || "" });
+        setInitialValues(draft ? JSON.parse(draft) : {});
       })
       .catch(() => setInitialValues({}));
   }, []);

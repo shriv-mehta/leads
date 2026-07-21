@@ -22,16 +22,14 @@ const AreaPinMap = ({ groups }) => {
     if (!mapInstance.current) {
       mapInstance.current = new window.google.maps.Map(mapRef.current, {
         center: EDMONTON_CENTER,
-        zoom: 11,
+        zoom: 10,
       });
     }
 
     const map = mapInstance.current;
-    const bounds = new window.google.maps.LatLngBounds();
     const infoWindow = new window.google.maps.InfoWindow();
     const markers = pinned.map((group) => {
       const position = { lat: Number(group.areaLat), lng: Number(group.areaLng) };
-      bounds.extend(position);
 
       const marker = new window.google.maps.Marker({
         position,
@@ -52,9 +50,9 @@ const AreaPinMap = ({ groups }) => {
       return marker;
     });
 
-    if (pinned.length > 0) {
-      map.fitBounds(bounds);
-    }
+    // Deliberately no fitBounds() here — a rep with one or two leads would
+    // get zoomed in tight on a single point instead of seeing the city.
+    // The map always stays at the fixed Edmonton-wide view set above.
 
     return () => markers.forEach((marker) => marker.setMap(null));
   }, [isLoaded, pinned]);

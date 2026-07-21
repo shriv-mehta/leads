@@ -36,14 +36,22 @@ const TeamMapPage = () => {
       <div className="filter-bar">
         <Select
           name="owner_id"
+          label="Employee"
           placeholder="All employees"
           options={employees.map((e) => ({ value: e.id, label: e.name }))}
           value={filters.owner_id}
           onChange={handle("owner_id")}
         />
-        <Select name="status" placeholder="All statuses" options={STATUS_OPTIONS} value={filters.status} onChange={handle("status")} />
-        <DatePicker name="from" value={filters.from} onChange={handle("from")} aria-label="From date" />
-        <DatePicker name="to" value={filters.to} onChange={handle("to")} aria-label="To date" />
+        <Select
+          name="status"
+          label="Status"
+          placeholder="All statuses"
+          options={STATUS_OPTIONS}
+          value={filters.status}
+          onChange={handle("status")}
+        />
+        <DatePicker name="from" label="From" value={filters.from} onChange={handle("from")} />
+        <DatePicker name="to" label="To" value={filters.to} onChange={handle("to")} />
       </div>
 
       {error && <ErrorState message={error} onRetry={fetchMap} />}

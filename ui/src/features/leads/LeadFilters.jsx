@@ -8,36 +8,29 @@ const LeadFilters = ({ filters, onChange, employees, areaSuggestions = [] }) => 
 
   return (
     <div className="filter-bar">
-      <Input
-        name="q"
-        placeholder="Search name or company"
-        value={filters.q}
-        onChange={handle("q")}
-        aria-label="Search leads"
-      />
+      <Input name="q" label="Search" value={filters.q} onChange={handle("q")} />
       <Select
         name="status"
+        label="Status"
         placeholder="All statuses"
         options={STATUS_OPTIONS}
         value={filters.status}
         onChange={handle("status")}
-        aria-label="Filter by status"
       />
       <Select
         name="chance"
+        label="Business Chance"
         placeholder="All chances"
         options={CHANCE_OPTIONS}
         value={filters.chance}
         onChange={handle("chance")}
-        aria-label="Filter by business chance"
       />
       <Input
         name="area"
+        label="Area"
         list="area-suggestions"
-        placeholder="Area"
         value={filters.area}
         onChange={handle("area")}
-        aria-label="Filter by area"
       />
       <datalist id="area-suggestions">
         {areaSuggestions.map((area) => (
@@ -47,15 +40,15 @@ const LeadFilters = ({ filters, onChange, employees, areaSuggestions = [] }) => 
       {employees && (
         <Select
           name="owner_id"
+          label="Employee"
           placeholder="All employees"
           options={employees.map((e) => ({ value: e.id, label: e.name }))}
           value={filters.owner_id}
           onChange={handle("owner_id")}
-          aria-label="Filter by employee"
         />
       )}
-      <DatePicker name="from" value={filters.from} onChange={handle("from")} aria-label="From date" />
-      <DatePicker name="to" value={filters.to} onChange={handle("to")} aria-label="To date" />
+      <DatePicker name="from" label="From" value={filters.from} onChange={handle("from")} />
+      <DatePicker name="to" label="To" value={filters.to} onChange={handle("to")} />
     </div>
   );
 };

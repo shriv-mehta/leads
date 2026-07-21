@@ -21,10 +21,9 @@
   gap: var(--space-4);
 }
 
-.auth-card__brand {
-  text-align: center;
-  font-size: var(--font-size-xl);
-  font-weight: 700;
+.auth-card__logo {
+  display: flex;
+  justify-content: center;
 }
 
 .auth-card__subtitle {

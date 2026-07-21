@@ -43,13 +43,10 @@ const LeadDetailPage = () => {
   const handleSave = async (values) => {
     setIsSaving(true);
     try {
-      const { duplicateWarning } = await leadApi.updateLead(id, values);
-      if (duplicateWarning) {
-        showToast(
-          `Heads up: ${duplicateWarning.contactName} at ${duplicateWarning.companyName} may already be a lead.`,
-          "default"
-        );
-      }
+      // Duplicate warnings matter when a rep is about to create a fresh
+      // lead blind — on an edit they're already looking at the record,
+      // so this just re-surfaces noise about itself/a sibling. Skip it here.
+      await leadApi.updateLead(id, values);
       showToast("Lead updated.", "success");
       await fetchLead();
     } catch (err) {

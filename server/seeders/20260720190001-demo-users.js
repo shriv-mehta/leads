@@ -11,15 +11,15 @@ const EMPLOYEE_IDS = [
 module.exports = {
   up: async (queryInterface) => {
     const now = new Date();
-    const passwordHash = await bcrypt.hash("Password@123", 10);
+    const passwordHash = await bcrypt.hash("Prema@2026", 10);
 
     await queryInterface.bulkInsert(
       "users",
       [
         {
           id: ADMIN_ID,
-          name: "Admin User",
-          email: "admin@fieldleads.dev",
+          name: "Jonathan Jeyathas",
+          email: "j.jeyathas@prema.ca",
           passwordHash,
           phone: "9000000001",
           role: "admin",
@@ -29,37 +29,15 @@ module.exports = {
         },
         {
           id: EMPLOYEE_IDS[0],
-          name: "Asha Rao",
-          email: "asha.rao@fieldleads.dev",
+          name: "Shivam Mehta",
+          email: "shivam.mehta@prema.ca",
           passwordHash,
           phone: "9000000002",
           role: "employee",
           isActive: true,
           createdAt: now,
           updatedAt: now,
-        },
-        {
-          id: EMPLOYEE_IDS[1],
-          name: "Karan Mehta",
-          email: "karan.mehta@fieldleads.dev",
-          passwordHash,
-          phone: "9000000003",
-          role: "employee",
-          isActive: true,
-          createdAt: now,
-          updatedAt: now,
-        },
-        {
-          id: EMPLOYEE_IDS[2],
-          name: "Priya Nair",
-          email: "priya.nair@fieldleads.dev",
-          passwordHash,
-          phone: "9000000004",
-          role: "employee",
-          isActive: true,
-          createdAt: now,
-          updatedAt: now,
-        },
+        }
       ],
       { ignoreDuplicates: true }
     );

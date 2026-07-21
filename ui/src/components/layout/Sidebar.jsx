@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { NAV_ITEMS } from "./navConfig";
+import Logo from "../common/Logo";
 
 const Sidebar = ({ role, isOpen, onClose }) => {
   const items = NAV_ITEMS[role] || [];
@@ -8,6 +9,9 @@ const Sidebar = ({ role, isOpen, onClose }) => {
     <>
       {isOpen && <div className="app-sidebar__scrim" onClick={onClose} />}
       <aside className={`app-sidebar ${isOpen ? "app-sidebar--open" : ""}`}>
+        <div className="app-sidebar__logo">
+          <Logo size={28} />
+        </div>
         <nav className="stack">
           {items.map((item) => (
             <NavLink

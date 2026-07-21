@@ -13,10 +13,10 @@
   --color-border: rgba(11, 11, 11, 0.1);
   --color-gridline: #e1e0d9;
 
-  /* Brand */
-  --color-brand: #2a78d6;
-  --color-brand-strong: #184f95;
-  --color-brand-tint: #e8f0fb;
+  /* Brand — Prema Group orange */
+  --color-brand: #e8570a;
+  --color-brand-strong: #c2450a;
+  --color-brand-tint: #fdece1;
 
   /* Status (fixed, never themed) */
   --color-good: #0ca30c;
@@ -39,7 +39,7 @@
   --color-chance-cold-tint: #e9e6f7;
 
   /* Chart series */
-  --chart-series-1: #2a78d6;
+  --chart-series-1: #e8570a;
   --chart-series-2: #0ca30c;
   --chart-axis: #c3c2b7;
   --chart-grid: #e1e0d9;
@@ -95,9 +95,9 @@
     --color-border: rgba(255, 255, 255, 0.1);
     --color-gridline: #2c2c2a;
 
-    --color-brand: #3987e5;
-    --color-brand-strong: #86b6ef;
-    --color-brand-tint: #16273b;
+    --color-brand: #ff7a33;
+    --color-brand-strong: #ffa366;
+    --color-brand-tint: #3a2013;
 
     --color-good: #0ca30c;
     --color-good-tint: #123312;
@@ -116,7 +116,7 @@
     --color-chance-cold: #9085e9;
     --color-chance-cold-tint: #23204a;
 
-    --chart-series-1: #3987e5;
+    --chart-series-1: #ff7a33;
     --chart-series-2: #0ca30c;
     --chart-axis: #383835;
     --chart-grid: #2c2c2a;
@@ -136,9 +136,9 @@
   --color-border: rgba(255, 255, 255, 0.1);
   --color-gridline: #2c2c2a;
 
-  --color-brand: #3987e5;
-  --color-brand-strong: #86b6ef;
-  --color-brand-tint: #16273b;
+  --color-brand: #ff7a33;
+  --color-brand-strong: #ffa366;
+  --color-brand-tint: #3a2013;
 
   --color-good: #0ca30c;
   --color-good-tint: #123312;
@@ -157,7 +157,7 @@
   --color-chance-cold: #9085e9;
   --color-chance-cold-tint: #23204a;
 
-  --chart-series-1: #3987e5;
+  --chart-series-1: #ff7a33;
   --chart-series-2: #0ca30c;
   --chart-axis: #383835;
   --chart-grid: #2c2c2a;
